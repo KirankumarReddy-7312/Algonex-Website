@@ -1,0 +1,2 @@
+Authentication SUCCESS for Algonex
+User flags: Staff=True, Super=True, Active=True
