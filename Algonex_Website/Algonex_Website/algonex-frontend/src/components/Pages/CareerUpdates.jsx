@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { MapPin, Briefcase, Clock, Filter, ArrowRight, FileText, Monitor, Award, ChevronDown, Check, Plus, Edit, Lock, X, Save, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ const CareerUpdates = () => {
     const API_BASE = (import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000').replace(/\/$/, '');
 
     // Fetch Jobs
-    const fetchJobs = async () => {
+    const fetchJobs = useCallback(async () => {
         try {
             const res = await fetch(`${API_BASE}/api/career/jobs/`);
             if (res.ok) {
@@ -43,11 +43,11 @@ const CareerUpdates = () => {
         } catch (err) {
             console.error("Failed to fetch jobs", err);
         }
-    };
+    }, [API_BASE]);
 
     useEffect(() => {
         fetchJobs();
-    }, []);
+    }, [fetchJobs]);
 
     // Combine Jobs
     const allOpportunities = [...apiJobs, ...staticJobs];
@@ -145,6 +145,7 @@ const CareerUpdates = () => {
                 setPasswordError("Incorrect password");
             }
         } catch (err) {
+            console.error(err);
             setPasswordError("Verification failed");
         }
     };

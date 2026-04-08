@@ -1,0 +1,13 @@
+
+> algonex-frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Home.jsx
+  111:9  error  'filteredCourses' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\ResumeTemplates.jsx
+  219:23  error  'pdfHeight' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 2 problems (2 errors, 0 warnings)
+

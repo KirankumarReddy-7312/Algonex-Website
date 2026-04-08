@@ -216,11 +216,11 @@ const ResumeTemplates = () => {
                 const img = await loadImage(template.previewImage);
 
                 const pdfWidth = doc.internal.pageSize.getWidth();
-                const pdfHeight = doc.internal.pageSize.getHeight();
+
 
                 // Calculate aspect ratio to fit the page 
                 const imgRatio = img.width / img.height;
-                const pdfRatio = pdfWidth / pdfHeight;
+
 
                 let renderWidth, renderHeight;
 
@@ -310,7 +310,7 @@ const ResumeTemplates = () => {
 
 
     // --- Enhanced Resume Preview Component (used for thumbnails and modal) ---
-    const ResumePreview = ({ layout, name, role, bg, category = 'experienced', isModal = false }) => {
+    const ResumePreview = ({ layout, name, role, bg, isModal = false }) => {
         // ... (Content generation logic similar to before) ...
         // 1. Fresher Content (Education Focus, Projects, Internships)
         const fresherContent = {

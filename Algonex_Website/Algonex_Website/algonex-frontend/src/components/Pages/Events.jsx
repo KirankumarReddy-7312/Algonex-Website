@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, Clock, ArrowRight, Search, Filter } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import nodopesWorkshop from '../../assets/nodopes-workshop.jpg';
-const apiUrl = import.meta.env.VITE_BACKEND_URL;
+import NodeOpsWorkshop from '../../assets/nodopes-workshop.jpg';
+
 
 const EventsPage = () => {
   const location = useLocation();
@@ -148,7 +148,7 @@ const EventsPage = () => {
   );
 
   const [showModal, setShowModal] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent] = useState(null);
   const [errors, setErrors] = useState({});
   const [emailSubscription, setEmailSubscription] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -251,6 +251,7 @@ const EventsPage = () => {
         setErrors(formattedErrors);
       }
     } catch (err) {
+      console.error(err);
       setErrors({ general: "Network error! Try again later." });
     }
   };

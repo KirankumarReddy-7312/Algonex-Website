@@ -3,7 +3,6 @@ import { X, Send, CheckCircle, FileText, Smartphone, Briefcase, GraduationCap, B
 
 const RegistrationModal = ({ isOpen, onClose, courseName, syllabusName }) => {
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [regStep, setRegStep] = useState('selection'); // 'selection' or 'form'
     const [userType, setUserType] = useState(null); // 'fresher' or 'experience'
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
@@ -13,7 +12,6 @@ const RegistrationModal = ({ isOpen, onClose, courseName, syllabusName }) => {
         company: '',
         designation: '',
         years_of_experience: '',
-        employment_status: '',
         employment_status: '',
         course_interested: courseName || '',
         reason: ''
@@ -26,7 +24,6 @@ const RegistrationModal = ({ isOpen, onClose, courseName, syllabusName }) => {
     const handleClose = () => {
         setIsSubmitted(false);
         setIsSubmitting(false);
-        setRegStep('selection');
         setUserType(null);
         setFormData({
             name: '',
@@ -48,7 +45,6 @@ const RegistrationModal = ({ isOpen, onClose, courseName, syllabusName }) => {
         const apiUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
         const submissionData = {
             ...formData,
-            employment_status: userType === 'experience' ? 'experienced' : 'fresher',
             employment_status: userType === 'experience' ? 'experienced' : 'fresher',
             course_interested: courseName || formData.reason || 'General Inquiry',
             // Defaults to satisfy backend requirements for optional fields

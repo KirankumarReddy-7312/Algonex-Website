@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -24,97 +24,16 @@ const carouselImages = [
   'https://ik.imagekit.io/jfg6wtvbq/Algonex/Banner/banner-3.png?updatedAt=1762692122210'
 ];
 
-const categories = [
-  'Trending', 'Frontend', 'Backend', 'Data Science', 'Data Engineer', 'Java', 'Python', 'Excel',
-  'Gen AI', 'Cyber Security', 'DevOps', 'Cloud',
-  'Machine Learning', 'Power BI', 'Testing', 'Github'
-];
+
 
 const Home = () => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState("Trending");
   const [isWorkshopFormOpen, setIsWorkshopFormOpen] = useState(false);
   const [isEnrollModalOpen, setIsEnrollModalOpen] = useState(false);
 
-  // Enriched data to match the new card design requirements
-  const allCourses = [
-    {
-      title: 'Gen AI & LLM Mastery',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop',
-      level: 'Advanced',
-      duration: '3 Months',
-      internship: '2 Months',
-      tools: '15+ AI Tools',
-      projects: '12',
-      tags: ['Prompt Eng.', 'RAG', 'LLMs'],
-      category: 'Gen AI',
-      new: true
-    },
-    {
-      title: 'Full Stack Data Science',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
-      level: 'A-Z Program',
-      duration: '6 Months',
-      internship: '3 Months',
-      tools: '20+ Tools',
-      projects: '18',
-      tags: ['Python', 'ML', 'Deep Learning'],
-      category: 'Data Science',
-      new: true
-    },
-    {
-      title: 'MERN Stack Development',
-      image: 'https://ik.imagekit.io/ipo22webapp/Picture3.png?updatedAt=1759557480087',
-      level: 'Full Stack',
-      duration: '5 Months',
-      internship: '3 Months',
-      tools: '10+ Tools',
-      projects: '15',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      category: 'Frontend',
-      new: false
-    },
-    {
-      title: 'Cloud & DevOps Architect',
-      image: 'https://ik.imagekit.io/ipo22webapp/Picture5.png?updatedAt=1759557479964',
-      level: 'Expert',
-      duration: '6 Months',
-      internship: '2 Months',
-      tools: 'AWS/Azure',
-      projects: '10',
-      tags: ['Docker', 'K8s', 'CI/CD'],
-      category: 'DevOps',
-      new: true
-    },
-    {
-      title: 'Java Full Stack',
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop',
-      level: 'Intermediate',
-      duration: '5 Months',
-      internship: '2 Months',
-      tools: 'Spring Boot',
-      projects: '14',
-      tags: ['Java', 'Microservices'],
-      category: 'Java',
-      new: false
-    },
-    {
-      title: 'Power BI & Data Analytics',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
-      level: 'Beginner',
-      duration: '2 Months',
-      internship: '1 Month',
-      tools: 'Power BI',
-      projects: '8',
-      tags: ['DAX', 'Visualization'],
-      category: 'Power BI',
-      new: false
-    }
-  ];
 
-  const filteredCourses = selectedCategory === 'Trending'
-    ? allCourses
-    : allCourses.filter(course => course.category === selectedCategory || selectedCategory === 'Trending');
+
+
 
   const settings = {
     dots: true,
@@ -126,29 +45,7 @@ const Home = () => {
     autoplaySpeed: 2500
   };
 
-  const courseSliderSettings = {
-    dots: true,
-    infinite: filteredCourses.length > 3,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  };
+
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F0F9FF]">

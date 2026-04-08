@@ -1,0 +1,11 @@
+
+> algonex-frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Home.jsx
+  31:10  error  'selectedCategory' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  36:9   error  'allCourses' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u        no-unused-vars
+
+Γ£û 2 problems (2 errors, 0 warnings)
+

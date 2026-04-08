@@ -1,0 +1,38 @@
+
+> algonex-frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Common\RegistrationModal.jsx
+   6:12  error  'regStep' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  17:9   error  Duplicate key 'employment_status'                                                        no-dupe-keys
+  52:13  error  Duplicate key 'employment_status'                                                        no-dupe-keys
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Allcourses.jsx
+  12:10  error  'showFilters' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+  12:23  error  'setShowFilters' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\CareerUpdates.jsx
+   50:8   warning  React Hook useEffect has a missing dependency: 'fetchJobs'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  147:18  error    'err' is defined but never used                                                                               no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Events.jsx
+    5:7   error  'apiUrl' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u            no-unused-vars
+  151:25  error  'setSelectedEvent' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  253:14  error  'err' is defined but never used                                                                   no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Home.jsx
+    1:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                      no-unused-vars
+   27:7   error  'categories' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u            no-unused-vars
+   35:28  error  'setSelectedCategory' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u   no-unused-vars
+  129:9   error  'courseSliderSettings' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\ResumeTemplates.jsx
+  223:23  error  'pdfRatio' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  313:54  error  'category' is assigned a value but never used                                             no-unused-vars
+
+C:\Users\kiran\OneDrive\Desktop\Algo_backup\algo\Algonex_Website\Algonex_Website\algonex-frontend\src\components\Pages\Signin.jsx
+  196:14  error  'error' is defined but never used  no-unused-vars
+
+Γ£û 17 problems (16 errors, 1 warning)
+

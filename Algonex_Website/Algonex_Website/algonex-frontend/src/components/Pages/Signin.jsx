@@ -194,6 +194,7 @@ const Signin = () => {
         alert(`Registration Failed: ${JSON.stringify(result)}`); // Temporary alert for visibility
       }
     } catch (error) {
+      console.error(error);
       alert('Network error. Please try again later.');
     } finally {
       setIsSubmitting(false);

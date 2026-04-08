@@ -9,7 +9,6 @@ const CoursesPage = () => {
   const [sortBy, setSortBy] = useState('default');
   const [levelFilter, setLevelFilter] = useState('all');
   const [durationFilter, setDurationFilter] = useState('all');
-  const [showFilters, setShowFilters] = useState(false);
   const scrollRef = useRef(null);
   const categories = [
     'All Courses', 'Trending', 'Frontend', 'Backend', 'Data Engineer', 'Java', 'Python',
